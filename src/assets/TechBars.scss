@@ -1,0 +1,71 @@
+$height: 30px;
+$width: 45vw;
+
+
+
+.tech-bars {
+	.box {
+		border: rgb(5, 4, 4) solid 2px;
+		border-radius: 15px;
+		width: $width;
+		margin: 25px;
+		height: fit-content;
+		position: relative;
+
+		.icon {
+			height: $height;
+			position: absolute;
+			left: 10px;
+			top: 0;
+		}
+
+		.bar {
+			height: $height;
+			border-radius: 12px;
+			border: rgb(5, 4, 4) solid 1px;
+		}
+
+		.react {
+			background-color: rgb(2, 92, 144);
+			animation: lenght 5s forwards;
+		}
+
+		.ts {
+			background-color: rgb(2, 25, 66);
+			animation: lenghtTS 3s forwards;
+		}
+
+      .csharp {
+			background-color: rgb(72, 3, 95);
+			animation: lenghtC 4s forwards;
+		}
+	}
+}
+
+@keyframes lenght {
+	from {
+		width: 0;
+	}
+	to {
+		width: $width * 0.8;
+	}
+}
+
+
+@keyframes lenghtTS {
+	from {
+		width: 0;
+	}
+	to {
+		width: $width * 0.75;
+	}
+}
+
+@keyframes lenghtC {
+	from {
+		width: 0;
+	}
+	to {
+		width: $width * 0.5;
+	}
+}
