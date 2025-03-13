@@ -1,23 +1,23 @@
 import "./TechBars.scss";
 import StackIcon from "tech-stack-icons";
 
+const bars: string[] = ["reactjs", "sass","typescript", "csharp"];
+
 const TechBars = () => {
 	return (
 		<div className="tech-bars">
-			<h1>Tech Bars</h1>
-			<div className="box">
-				<StackIcon className="icon" name="reactjs" />
-				<div className="bar react"></div>
-			</div>
-
-      <div className="box">
-				<StackIcon className="icon" name="typescript" />
-				<div className="bar ts"></div>
-			</div>
-
-      <div className="box">
-				<StackIcon className="icon" name="csharp" />
-				<div className="bar csharp"></div>
+			<h1>Tech skills</h1>
+			<div className="bars">
+				{bars.map((item, index) => {
+					return (
+						<div key={index} className="box">
+							<div className="circle">
+								<StackIcon className="icon" name={item} />
+							</div>
+							<div className={`bar ${item}`}></div>
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	);

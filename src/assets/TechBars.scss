@@ -1,48 +1,78 @@
-$height: 30px;
+$height: 60px;
 $width: 45vw;
 
-
-
 .tech-bars {
-	.box {
-		border: rgb(5, 4, 4) solid 2px;
-		border-radius: 15px;
-		width: $width;
-		margin: 25px;
-		height: fit-content;
-		position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-		.icon {
-			height: $height;
-			position: absolute;
-			left: 10px;
-			top: 0;
-		}
+	.bars {
+		border: solid black 5px;
+		background-color: #242424;
+		.box {
+			border-radius: 15px;
+			width: $width;
+			margin: 40px;
+			height: fit-content;
+			position: relative;
 
-		.bar {
-			height: $height;
-			border-radius: 12px;
-			border: rgb(5, 4, 4) solid 1px;
-		}
+			.circle {
+				position: absolute;
+				border-radius: 50%;
+				background-color: #242424;
+				// background: radial-gradient();
+				height: 90px;
+				width: 90px;
+				left: -20px;
+				top: -20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-shadow: 0 0 8px black;
+				overflow: hidden;
+			}
 
-		.react {
-			background-color: rgb(2, 92, 144);
-			animation: lenght 5s forwards;
-		}
+			.icon {
+				height: $height;
+				left: 10px;
+				top: 0;
+			}
 
-		.ts {
-			background-color: rgb(2, 25, 66);
-			animation: lenghtTS 3s forwards;
-		}
+			.bar {
+				margin-left: 50px;
+				height: $height;
+				box-shadow: 5px 5px 5px #141414;
+			}
 
-      .csharp {
-			background-color: rgb(72, 3, 95);
-			animation: lenghtC 4s forwards;
+			.reactjs {
+				animation: lenghtReact 4s forwards ease-out;
+				border-radius: 0 15px 15px 0;
+				background: linear-gradient(360deg, #1f9deb, #025c90);
+			}
+
+			.typescript {
+				background: linear-gradient(360deg, #086096, #062c7e);
+				animation: lenghtTS 3s forwards ease-in;
+				border-radius: 0 15px 15px 0;
+			}
+
+			.csharp {
+				background: linear-gradient(360deg, #8105e7, #48035f);
+				animation: lenghtC 4s forwards;
+				border-radius: 0 15px 15px 0;
+			}
+
+			.sass {
+				background: linear-gradient(360deg, #e705a3, #5f0317);
+				animation: lenghtSass 8s forwards;
+				border-radius: 0 15px 15px 0;
+			}
 		}
 	}
 }
 
-@keyframes lenght {
+@keyframes lenghtReact {
 	from {
 		width: 0;
 	}
@@ -51,6 +81,14 @@ $width: 45vw;
 	}
 }
 
+@keyframes lenghtSass {
+	from {
+		width: 0;
+	}
+	to {
+		width: $width * 0.9;
+	}
+}
 
 @keyframes lenghtTS {
 	from {
